@@ -1,0 +1,281 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1b1b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 1vh;
+}
+
+/* Header and Navigation Styles */
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #333;
+}
+
+header nav a, .social-links a {
+    color: #f0f0f0;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Hover Effects for Links */
+header nav a::after, .social-links a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: #1ca8dd;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+header nav a:hover::after, .social-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Social Links Styles */
+.social-links img {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
+
+/* Welcome Message Styles */
+.welcome-message {
+    text-align: center;
+    padding: 20px;
+    font-size: 3em;
+    color: #f0f0f0;
+    width: 100%;
+    margin-top: 100px;
+}
+
+/* Responsive Design for Welcome Message */
+@media screen and (max-width: 768px) {
+    .welcome-message {
+        font-size: 2em;
+        margin-top: 60px;
+    }
+}
+
+/* Main Content Styles */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    width: 100%;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.section-container h1, .section-container h2 {
+    font-size: 2em;
+    color: #f0f0f0;
+    margin: 0 0 15px;
+}
+
+/* Animated Image Styles */
+.animated-image {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease-in-out;
+}
+
+.animated-image:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Responsive Design for Main Content */
+@media screen and (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 60px;
+    }
+
+    .section-container {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    .animated-image {
+        width: 80%;
+    }
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #ddd;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Contact Form Container Styles */
+.contact-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-header h2 {
+    color: #333;
+    margin-bottom: 0em; /* Adjusted bottom margin */
+    text-align: center; /* Center the text */
+    padding-top: 0px; /* Add padding to the top */
+    font-size: 2em; /* Optionally increase font size for prominence */
+}
+}
+
+.contact-form-header p {
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/* Textarea Styles for Contact Form */
+.contact-form textarea {
+  width: 400%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  height: 200px;
+  resize: vertical;
+}
+
+/* Responsive Design for Contact Form */
+@media (max-width: 768px) {
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+}
+/* Increase top margin of the 'contact-form-container' class */
+.contact-form-container {
+    /* existing styles */
+    margin-top: 150px; /* Adjust this value as needed */
+}
+/* Base Styles with updated background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://i.imgur.com/sh58SVJ.jpeg'); /* Background image for the entire page */
+    background-color: #1b1b1b; /* Fallback background color */
+    background-size: cover; /* Ensure the image covers the full page */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full height of the viewport */
+}
+
+/* Rest of your CSS remains the same */
+/* ... */
+/* Specific Textarea Styles for 'Your Message' */
+/* Contact Form Container Styles */
+.contact-form-container {
+    /* existing styles */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Specific Textarea Styles for 'Your Message' */
+#message {
+    width: 80%; /* Adjust width as needed, less than 100% for centering */
+    max-width: 600px; /* Maximum width */
+    height: 40px; /* Increased height */
+    padding: 40px; /* Comfortable padding for typing */
+    font-size: 1em; /* Adjust the font size as needed */
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin: 20px auto; /* Auto margins for horizontal centering */
+    resize: vertical; /* Allows vertical resizing */
+}
